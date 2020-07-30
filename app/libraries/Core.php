@@ -10,10 +10,12 @@ class Core
     {
         //print_r($this->getUrl());
         $url = $this->getUrl();
+        //print_r($url);
 
-        echo 'Antes';
+        //print_r('../app/controllers/' . ucwords($url[0]) . '.php');
+        //return;
 
-        if (file_exists('../app/controllers' . ucwords($url[0]) . 'php')) {
+        if (file_exists('../app/controllers/' . ucwords($url[0]) . '.php')) {
             $this->UrlController = ucwords($url[0]);
 
             print_r($url[0]);
